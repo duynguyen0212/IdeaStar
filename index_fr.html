@@ -1,0 +1,127 @@
+﻿<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Idea Star Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav>
+        <div id="home" class="logo">
+            <img src="logo.png" width="180" />
+        </div>
+
+        <div id="toggle"></div>
+        <div id="sidebar">
+            <ul>
+                <li><a href="#home" id="click">Accueil</a></li>
+                <li><a href="#about" id="click">À propos</a></li>
+                <li><a href="#service" id="click">Services</a></li>
+                <li><a href="#contact" id="click">Contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <br />
+
+    <div class="crl"></div>
+
+    <div class="bg-image"><a href="index.html"><p class="language2">English</p></a> </div>
+    <section class="content">
+        <h2>IDEA STAR</h2>
+        <p1>Alimentez votre potentiel avec nos solutions automatisées flexibles</p1>
+    </section>
+
+    <br />
+
+    <section class="about" , id="about">
+        <h1 id="about">À PROPOS DE NOUS</h1>
+        <p>
+            Spécialisée dans l'automatisation industrielle, IDEA STAR propose une gamme complète de
+            services de conseil et d'ingénierie. Basé sur l'optimisation des systèmes automatisés,
+            nos solutions répondent aux enjeux spécifiques de l'industrie : réduction des coûts d'exploitation,
+            améliore la productivité et la rentabilité, tout en assurant la sécurité
+            et la sécurité des opérations et la fiabilité des équipements.
+            Concentrez-vous sur vos objectifs et laissez-nous vous conduire vers de nouveaux horizons.
+        </p>
+    </section>
+
+    <br />
+    <div class="heading">
+        <br />
+        <h1 id="service">SERVICES</h1>
+        <br />
+    </div>
+    <div class="service">
+        <div class="service1"><h1>Programmation API</h1></div>
+        <div class="service2"><h1>Itération de robot industriel</h1></div>
+        <div class="service3"><h1>Vision industrielle</h1></div>
+        <div class="service4"><h1>Étalonnage de l'instrument</h1></div>
+    </div>
+
+    <div class="crl"></div>
+
+    <section class="contact-us" id="contact">
+        <br />
+        <h1 class="footer">CONTECTEZ-NOUS</h1>
+        <br />
+        <div class="row">
+
+            <div class="contact-col">
+                <div>
+                    <i class="fas fa-home"></i>
+                    <span>
+                        <h5>4594 Rue du Roitelet</h5>
+                        <h5>Sherbrooke (Quebec) JN1 2ZN</h5>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <span>
+                        <h5>819-580-3118</h5>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <span>
+                        <h5>alexandre.potvin@ideastar.ca</h5>
+                    </span>
+                </div>
+            </div>
+
+            <div class="contact-col">
+                <form action="form-handler.php" method="post">
+                    <input type="text" name="name" placeholder="Entrez Votre Nom" required>
+                    <input type="text" name="email" placeholder="Entrer Votre Emai" required>
+                    <input type="text" name="subject" placeholder="Entrer Votre Sujet" required>
+                    <textarea rows="8" name="message" placeholder="Un Message" required></textarea>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+        const toggle = document.getElementById('toggle')
+        const sidebar = document.getElementById('sidebar')
+
+        document.onclick = function (e) {
+            if (e.target.id !== 'sidebar' && e.target.id !== 'toggle') {
+                toggle.classList.remove('active')
+                sidebar.classList.remove('active')
+            }
+        }
+        toggle.onclick = function () {
+            toggle.classList.toggle('active')
+            sidebar.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>
